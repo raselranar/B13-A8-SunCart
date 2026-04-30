@@ -2,7 +2,7 @@
 import { Sun } from "@gravity-ui/icons";
 import { useState } from "react";
 import NavLink from "../UI/NavLink";
-import { Button } from "@heroui/react";
+import { Button, Separator } from "@heroui/react";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,11 +21,11 @@ const NavBar = () => {
   const loginButtons = (
     <>
       <Button
-        className="border-accent rounded-lg text-accent"
+        className="border-accent rounded-lg text-accent hover:bg-accent hover:text-white"
         variant="outline">
         Login
       </Button>
-      <Button className="bg-accent rounded-lg">Register</Button>
+      <Button className="rounded-lg">Register</Button>
     </>
   );
 
@@ -79,8 +79,9 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className="border-t border-separator md:hidden p-4">
             <ul className="flex flex-col gap-2 ">{links}</ul>
+            <Separator className="mt-2 bg-accent/50 -mb-2" />
             {/* login buttons */}
-            <div className="gap-4 mt-4 *:w-full flex">{loginButtons}</div>
+            <div className="gap-4 mt-4 *:w-full flex ">{loginButtons}</div>
           </div>
         )}
       </nav>
