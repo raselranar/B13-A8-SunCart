@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "originalPrice": 30,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV400 protection sunglasses perfect for summer outings. Blocks 100% of UVA and UVB rays with polarized lenses for crystal-clear vision. Lightweight frame fits all face shapes.",
+    "image": "https://images.unsplash.com/photo-1562261150-0989084c593e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVViUyMHByb3RlY3Rpb24lMjBzdW5nbGFzc2VzJTIwc3VtbWVyfGVufDF8fHx8MTc3NzQ2ODg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Accessories",
+    "features": [
+      "UV400 protection",
+      "Polarized lenses",
+      "Lightweight frame",
+      "Unisex design"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Breezy Summer Dress",
+    "brand": "CoralWave",
+    "price": 35,
+    "originalPrice": 70,
+    "rating": 4.5,
+    "stock": 8,
+    "description": "A lightweight, flowy summer dress made from 100% breathable cotton. Perfect for beach days, garden parties, or casual outings. Available in multiple vibrant summer colors.",
+    "image": "https://images.unsplash.com/photo-1774360505117-ef742e1265eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW1tZXIlMjBjb2xvcmZ1bCUyMG91dGZpdCUyMGRyZXNzfGVufDF8fHx8MTc3NzQ2ODg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Clothing",
+    "features": [
+      "100% cotton",
+      "Breathable fabric",
+      "Flowy silhouette",
+      "Machine washable"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "SPF 50+ Sunscreen Lotion",
+    "brand": "GlowGuard",
+    "price": 12,
+    "originalPrice": 20,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Broad-spectrum SPF 50+ sunscreen that protects against both UVA and UVB rays. Water-resistant for up to 80 minutes, non-greasy formula suitable for all skin types including sensitive skin.",
+    "image": "https://images.unsplash.com/photo-1698906821280-34072d3ac1be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5zY3JlZW4lMjBza2luY2FyZSUyMGxvdGlvbiUyMFNQRnxlbnwxfHx8fDE3Nzc0Njg4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Skincare",
+    "features": [
+      "SPF 50+",
+      "Water-resistant 80 min",
+      "Non-greasy",
+      "Suitable for all skin types"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Woven Beach Tote Bag",
+    "brand": "ShoreStyle",
+    "price": 22,
+    "originalPrice": 40,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Spacious handwoven beach tote bag crafted from eco-friendly materials. Features interior zip pocket, extra-wide straps, and fits all your beach essentials including towels and sunscreen.",
+    "image": "https://images.unsplash.com/photo-1760297553281-48313d0ade75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMGJhZyUyMGFjY2Vzc29yaWVzJTIwc3VtbWVyfGVufDF8fHx8MTc3NzQ2ODg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Accessories",
+    "features": [
+      "Eco-friendly materials",
+      "Interior zip pocket",
+      "Wide shoulder straps",
+      "Easy to clean"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Wide-Brim Sun Hat",
+    "brand": "SunShade",
+    "price": 18,
+    "originalPrice": 35,
+    "rating": 4.4,
+    "stock": 12,
+    "description": "Elegant wide-brim straw sun hat offering UPF 50+ protection. Adjustable inner band for a perfect fit. Foldable and packable, ideal for travel. Perfect complement to any summer outfit.",
+    "image": "https://images.unsplash.com/photo-1707399220651-5d15865ce117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhdyUyMHN1biUyMGhhdCUyMGJlYWNoJTIwc3VtbWVyfGVufDF8fHx8MTc3NzQ2ODg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Accessories",
+    "features": [
+      "UPF 50+ protection",
+      "Adjustable inner band",
+      "Foldable & packable",
+      "Natural straw material"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroPlus",
+    "price": 28,
+    "originalPrice": 45,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "Double-walled vacuum insulated stainless steel water bottle. Keeps drinks cold for 24 hours and hot for 12 hours. BPA-free, leak-proof lid, perfect for summer outdoor activities.",
+    "image": "https://images.unsplash.com/photo-1692047013388-3182e2c5c77e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMGJvdHRsZSUyMGh5ZHJhdGlvbiUyMHN1bW1lcnxlbnwxfHx8fDE3Nzc0MDA5NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Drinkware",
+    "features": [
+      "Cold 24 hrs / Hot 12 hrs",
+      "BPA-free stainless steel",
+      "Leak-proof lid",
+      "500ml capacity"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Comfort Flip Flops",
+    "brand": "CoralWave",
+    "price": 10,
+    "originalPrice": 18,
+    "rating": 4.3,
+    "stock": 30,
+    "description": "Ultra-comfortable flip flops with memory foam insoles and non-slip rubber outsoles. Quick-drying design perfect for beach, pool, or casual walks. Available in 8 vibrant summer colors.",
+    "image": "https://images.unsplash.com/photo-1765030663689-b1283da1046f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmbGlwJTIwZmxvcHMlMjBzYW5kYWxzJTIwY29sb3JmdWwlMjBiZWFjaHxlbnwxfHx8fDE3Nzc0Njg4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Footwear",
+    "features": [
+      "Memory foam insoles",
+      "Non-slip rubber outsole",
+      "Quick-drying",
+      "8 color options"
+    ]
+  }
+]

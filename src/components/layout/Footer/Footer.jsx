@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* copyright content */}
-        <div className="flex flex-wrap justify-between pt-8 px-4 text-sm text-gray-400 gap-4">
+        <div className="flex flex-wrap justify-center  sm:justify-between pt-8 px-4 text-sm text-gray-400 gap-4">
           <p className="">© 2026 SunCart. All rights reserved.</p>
           <p className="">Made with ☀️ for summer lovers everywhere</p>
         </div>
