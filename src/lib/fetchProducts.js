@@ -1,4 +1,10 @@
 export const getProductsData = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products.json`);
-  return res.json();
+  try {
+    const res = await fetch(`${baseUrl}/products.json`);
+    if (!res.ok) throw new Error("Failed to fetch");
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return [];
+  }
 };

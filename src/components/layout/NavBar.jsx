@@ -30,7 +30,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="border-b border-separator sticky top-0 z-40 bg-background backdrop-blur-lg">
+    <div className="border-b border-separator sticky top-0 z-40 bg-white">
       <nav className="container mx-auto w-full">
         <header className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-4">
