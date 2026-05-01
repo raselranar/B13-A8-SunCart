@@ -1,6 +1,7 @@
 import { StarFill } from "@gravity-ui/icons";
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductCard = ({ product }) => {
   const { name, brand, price, originalPrice, rating, image, category } =
@@ -24,7 +25,9 @@ const ProductCard = ({ product }) => {
       />
       {/* Header */}
       <Card.Header className="text-white px-4">
-        <p className="text-accent uppercase text-xs font-semibold">{brand}</p>
+        <p className="text-accent uppercase text-xs font-semibold tracking-widest">
+          {brand}
+        </p>
         <Card.Title className="font-semibold tracking-wide text-black/70 line-clamp-1 text-lg">
           {name}
         </Card.Title>
@@ -44,13 +47,16 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="flex justify-between w-full items-center">
+          {/* price */}
           <div className="flex gap-2 items-center">
             <p className="text-accent font-bold">${price}</p>
             <p className="text-gray-400 text-sm line-through">
               ${originalPrice}
             </p>
           </div>
-          <Button>View Details</Button>
+          <Link href={`/products/${product.id}`}>
+            <Button>View Details</Button>
+          </Link>
         </div>
       </Card.Footer>
     </Card>
