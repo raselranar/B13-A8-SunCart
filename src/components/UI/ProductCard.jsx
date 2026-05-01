@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   const { name, brand, price, originalPrice, rating, image, category } =
     product;
   return (
-    <Card className="shadow-xl p-0 pb-4 h-full">
+    <Card className="shadow-xl p-0 pb-4 h-full hover:shadow-2xl">
       {/* top overlay */}
       <div className="absolute px-3 top-3 flex justify-between w-full">
         <Chip className="bg-accent text-white">

@@ -33,7 +33,7 @@ const TopBrands = () => {
         {brands.map((item, id) => {
           return (
             <Card key={id} className={`border-2 items-center ${item.color}`}>
-              <div className="font-bold text-2xl text-white bg-linear-to-b from-red-400 to-red-300 px-6 py-4 rounded-2xl">
+              <div className="font-bold text-2xl text-white bg-gradient bg-[linear-gradient(to bottom, #f87171, #fca5a5)] px-6 py-4 rounded-2xl">
                 {item.name.charAt(0).toUpperCase()}
               </div>
               <Card.Header className="text-center">

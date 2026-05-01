@@ -16,6 +16,8 @@
   /* Theme Colors (Light Mode) */
   --accent: lab(63.7053% 60.745 31.3109);
   --accent-foreground: oklch(99.11% 0 0);
+  --gradient: linear-gradient(to right, #f87171, #fca5a5);
+
   --background: oklch(97.02% 0.0119 340.6);
   --border: oklch(90% 0.0119 340.6);
   --danger: oklch(65.32% 0.2383 36.15);
@@ -88,4 +90,9 @@
   --surface-tertiary-foreground: oklch(99.11% 0.0119 340.6);
   --warning: oklch(82.03% 0.1421 86.75);
   --warning-foreground: oklch(21.03% 0.0059 86.75);
+}
+
+/* Make the color available to Tailwind */
+@theme inline {
+  --background-image-gradient: var(--gradient);
 }
