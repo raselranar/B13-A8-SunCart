@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
+import { Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Description,
@@ -11,23 +11,43 @@ import {
   Label,
   Separator,
   TextField,
+  toast,
 } from "@heroui/react";
 import { useState } from "react";
 import { LuSun } from "react-icons/lu";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { redirect } from "next/navigation";
 
 export default function LoginPage() {
   const [isPasswordShow, setIsPasswordShow] = useState(false);
-  const onSubmit = () => {
+
+  // sign in with google
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    if (!data.error) return toast.success("Welcome back! 🌞");
+  };
+  // form submit
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    const userData = Object.fromEntries(formData.entries());
 
-    // Convert FormData to plain object
-    formData.forEach((value, key) => {
-      data[key] = value.toString();
-    });
+    // sign up
+    const { data, error } = await authClient.signIn.email(userData);
+    console.log({ data, error });
 
-    alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+    // show toast error on
+    if (error?.status === 401)
+      return toast.danger(
+        "Login failed. Invalid email or password. Please try again.",
+      );
+    if (error) return toast.danger("Login failed.");
+    toast.success("Welcome back! 🌞");
+    redirect("/");
   };
 
   return (
@@ -42,10 +62,10 @@ export default function LoginPage() {
           <div className="bg-accent size-10 flex justify-center items-center text-white p-2 rounded-full">
             <LuSun size={40} />
           </div>
-          <h2 className="text-2xl text-gray-800 sm:text-4xl font-bold tracking-wider ">
+          <h2 className="text-2xl text-gray-800 sm:text-4xl font-bold tracking-wider mt-2 ">
             Welcome Back
           </h2>
-          <p className="text-gray-500">Sign in to your SunCart account</p>
+          <p className="text-gray-500 mt-2">Sign in to your SunCart account</p>
         </div>
         {/* inputs */}
         <div className="px-6 flex flex-col gap-4">
@@ -84,7 +104,7 @@ export default function LoginPage() {
               return null;
             }}>
             <Label>Password</Label>
-            <InputGroup>
+            <InputGroup className="overflow-hidden">
               <InputGroup.Input
                 placeholder="Enter password"
                 type={`${isPasswordShow ? "text" : "password"}`}
@@ -119,10 +139,19 @@ export default function LoginPage() {
             <Separator className="flex-1" variant="default" />
           </div>
           {/* google login button */}
-          <Button className="w-full" variant="tertiary">
+          <Button
+            onClick={handleGoogleSignIn}
+            className="w-full"
+            variant="tertiary">
             <Icon icon="devicon:google" />
-            Sign in with Google
+            Continue with Google
           </Button>
+          <div className="text-gray-500 text-sm text-center">
+            Don&apos;t have an account?{" "}
+            <Link href="/register" className="text-accent">
+              Register here
+            </Link>
+          </div>
         </div>
       </Form>
     </div>
