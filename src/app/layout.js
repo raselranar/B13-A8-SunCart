@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer/Footer";
 import { Toast } from "@heroui/react";
+import NavBar from "@/components/layout/Home/NavBar/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

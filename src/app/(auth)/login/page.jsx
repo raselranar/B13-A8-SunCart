@@ -51,9 +51,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center py-12 bg-background">
+    <div className="flex justify-center py-12 bg-background px-4">
       <Form
-        className="flex w-96 flex-col overflow-hidden gap-4 rounded-3xl outline-red-950 pb-6 shadow-xl "
+        className="flex w-96 flex-col overflow-hidden gap-4 rounded-3xl pb-6 shadow-xl "
         onSubmit={onSubmit}>
         {/* gradient border top */}
         <div className="bg-gradient rounded-t-full h-2 w-full"></div>

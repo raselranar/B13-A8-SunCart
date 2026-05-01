@@ -40,7 +40,7 @@ export default function RegistrationPage() {
   };
 
   return (
-    <div className="flex justify-center py-12 bg-background">
+    <div className="flex justify-center py-12 bg-background px-4">
       <Form
         className="flex w-96 flex-col overflow-hidden gap-4 rounded-3xl outline-red-950 pb-6 shadow-xl "
         onSubmit={onSubmit}>
@@ -54,7 +54,7 @@ export default function RegistrationPage() {
           <h2 className="text-2xl text-gray-800 sm:text-4xl mt-2 font-bold tracking-wider ">
             Create Account
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-500 mt-2 text-center">
             Join the SunCart community today!
           </p>
         </div>
