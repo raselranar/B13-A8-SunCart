@@ -1,0 +1,75 @@
+import { auth } from "@/lib/auth";
+import { Avatar, Badge, Button, Card } from "@heroui/react";
+import { headers } from "next/headers";
+import Link from "next/link";
+import { LuMail, LuPencil, LuUser } from "react-icons/lu";
+
+export default async function ProfilePage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  return (
+    <div className="flex justify-center py-12 bg-background px-4">
+      <Card className="flex  w-96 flex-col gap-4 p-0 rounded-3xl pb-6 shadow-xl">
+        {/* gradient border top */}
+        <div className="bg-gradient h-20 w-full"></div>
+        <div className="relative">
+          <div className="absolute -top-15 w-full flex justify-center">
+            <Badge.Anchor>
+              <Avatar className="size-26 border-4 border-white">
+                <Avatar.Image
+                  alt={session?.user?.name}
+                  src={session?.user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback className="text-2xl text-accent">
+                  {session?.user?.name.charAt(0).toUpperCase()}
+                </Avatar.Fallback>
+              </Avatar>
+              <Badge
+                color="success"
+                placement="bottom-right"
+                className="-translate-3"
+                size="sm"
+              />
+            </Badge.Anchor>
+          </div>
+          {/* logo */}
+          <div className="flex items-center flex-col mt-4">
+            <h2 className="text-2xl text-gray-800 sm:text-3xl font-bold tracking-wider mt-8 ">
+              {session?.user?.name}
+            </h2>
+            <p className="text-accent mt-2">SunCart Member</p>
+          </div>
+          {/* info */}
+          <ul className="flex flex-col gap-4 mt-4 mx-4">
+            <li className="flex gap-2 bg-orange-50 rounded-xl py-4 px-6">
+              <div className="bg-accent/40 text-accent w-fit p-2 rounded-xl flex items-center">
+                <LuUser size={24} />
+              </div>
+              <div className="">
+                <p className="text-gray-400 text-sm ">Full Name</p>
+                <p className="">{session?.user?.name}</p>
+              </div>
+            </li>
+            <li className="flex gap-2 bg-orange-50 rounded-xl py-4 px-6">
+              <div className="bg-accent/40 text-accent w-fit p-2 rounded-xl flex items-center">
+                <LuMail size={24} />
+              </div>
+              <div className="">
+                <p className="text-gray-400 text-sm ">Email Address</p>
+                <p className="">{session?.user?.email}</p>
+              </div>
+            </li>
+          </ul>
+          <Link href="/my-profile/update">
+            <Button fullWidth className="mt-4 mb-4" size="lg">
+              <LuPencil />
+              <span>Update Profile</span>
+            </Button>
+          </Link>
+        </div>
+      </Card>
+    </div>
+  );
+}

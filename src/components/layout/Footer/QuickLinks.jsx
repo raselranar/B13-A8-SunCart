@@ -16,7 +16,7 @@ const QuickLinks = () => {
           </Link>
         </li>
         <li>
-          <Link href="/profile" className="hover:text-accent text-sm">
+          <Link href="/my-profile" className="hover:text-accent text-sm">
             My Profile
           </Link>
         </li>

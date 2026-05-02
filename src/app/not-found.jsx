@@ -9,7 +9,7 @@ export const metadata = {
 };
 const NotFound = () => {
   return (
-    <div className="relative min-h-[60vh] gap-2 md:gap-4 flex flex-col items-center justify-center px-4">
+    <div className="relative min-h-[60vh] gap-2 md:gap-4 flex py-8 flex-col items-center justify-center px-4">
       <Image src="/beach.png" className="-z-10" alt="Background" fill />
       <h2 className="text-transparent text-5xl lg:text-9xl bg-gradient bg-clip-text font-black">
         404
@@ -22,7 +22,7 @@ const NotFound = () => {
         summer fun is still waiting for you!
       </p>
       {/* button */}
-      <div className="flex gap-4 flex-col sm:flex-row w-full sm:w-auto mx-auto mb-8">
+      <div className="flex gap-4 flex-col sm:flex-row w-full sm:w-auto mx-auto">
         <Link href="/">
           <Button fullWidth>Back To Home</Button>
         </Link>

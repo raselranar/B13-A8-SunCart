@@ -19,6 +19,15 @@ const getProductById = async (productId) => {
     return [];
   }
 };
+export async function generateMetadata({ params }) {
+  const { productId } = await params;
+  const product = await getProductById(productId);
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
 
 const ProductDetails = async ({ params }) => {
   const { productId } = await params;

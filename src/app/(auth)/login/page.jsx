@@ -20,7 +20,10 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 
-export default function LoginPage() {
+export default function LoginPage({ params }) {
+  (async function () {
+    console.log(await params);
+  })();
   const [isPasswordShow, setIsPasswordShow] = useState(false);
 
   // sign in with google

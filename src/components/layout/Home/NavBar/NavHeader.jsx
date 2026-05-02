@@ -22,7 +22,7 @@ const NavHeader = ({ session }) => {
       </li>
       {user && (
         <li>
-          <NavLink href="/profile">My Profile</NavLink>
+          <NavLink href="/my-profile">My Profile</NavLink>
         </li>
       )}
     </>
@@ -42,7 +42,7 @@ const NavHeader = ({ session }) => {
       </Link>
     </>
   ) : (
-    <>
+    <div className="flex items-center gap-4">
       <Avatar>
         <Avatar.Image
           alt={session.user.name}
@@ -59,7 +59,7 @@ const NavHeader = ({ session }) => {
         <LuLogOut />
         Logout
       </Button>
-    </>
+    </div>
   );
 
   return (
