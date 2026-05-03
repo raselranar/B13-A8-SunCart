@@ -30,15 +30,13 @@ const Banner = () => {
           <div
             key={id}
             className={`max-w-400 ${activeSlide === id ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
-            <div className="">
-              <Image
-                src={image}
-                className="object-cover absolute"
-                fill={true}
-                alt={title}
-              />
-            </div>
-            <div className="absolute bg-backdrop w-full h-full flex  items-center outline">
+            <Image
+              src={image}
+              className="object-cover absolute"
+              fill={true}
+              alt={title}
+            />
+            <div className="absolute bg-backdrop w-full h-full flex  items-center">
               {/* banner content */}
               <div
                 className={`text-white w-6/8 mx-auto sm:max-w-lg sm:w-full my-6 px-4 sm:ml-20 flex flex-col gap-4 ${activeSlide === id && animationStyles}`}>

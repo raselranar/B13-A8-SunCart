@@ -19,6 +19,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
+import GoogleLoginButton from "@/components/UI/GoogleLoginButton";
 
 export default function RegistrationPage() {
   const [isPasswordShow, setIsPasswordShow] = useState(false);
@@ -148,7 +149,7 @@ export default function RegistrationPage() {
           </TextField>
 
           <div className="flex gap-2">
-            <Button fullWidth type="submit">
+            <Button fullWidth size="lg" type="submit">
               Register
             </Button>
           </div>
@@ -161,10 +162,7 @@ export default function RegistrationPage() {
             <Separator className="flex-1" variant="default" />
           </div>
           {/* google login button */}
-          <Button className="w-full" variant="tertiary">
-            <Icon icon="devicon:google" />
-            Continue with Google
-          </Button>
+          <GoogleLoginButton />
           <div className="text-gray-500 text-sm text-center">
             Already have an account?{" "}
             <Link href="/login" className="text-accent">

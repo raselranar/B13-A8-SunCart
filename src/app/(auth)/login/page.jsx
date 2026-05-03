@@ -18,21 +18,18 @@ import { LuSun } from "react-icons/lu";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
-import { redirect } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import GoogleLoginButton from "@/components/UI/GoogleLoginButton";
+const sleep = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
-export default function LoginPage({ params }) {
-  (async function () {
-    console.log(await params);
-  })();
+export default function LoginPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  console.log("router:", router);
+
   const [isPasswordShow, setIsPasswordShow] = useState(false);
+  console.log("login page");
 
-  // sign in with google
-  const handleGoogleSignIn = async () => {
-    const data = await authClient.signIn.social({
-      provider: "google",
-    });
-    if (!data.error) return toast.success("Welcome back! 🌞");
-  };
   // form submit
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +47,13 @@ export default function LoginPage({ params }) {
       );
     if (error) return toast.danger("Login failed.");
     toast.success("Welcome back! 🌞");
-    redirect("/");
+    // if (searchParams.get("redirect") === "true") return router.back();
+    const redirectPath = searchParams.get("redirectTo") || "/home";
+    router.push(redirectPath);
+
+    // redirect to home or back
+    // await sleep();
+    // if (window.history.length > 1) return router.back();
   };
 
   return (
@@ -110,6 +113,7 @@ export default function LoginPage({ params }) {
             <InputGroup className="overflow-hidden">
               <InputGroup.Input
                 placeholder="Enter password"
+                className="py-3"
                 type={`${isPasswordShow ? "text" : "password"}`}
               />
               <InputGroup.Suffix
@@ -129,7 +133,7 @@ export default function LoginPage({ params }) {
           </TextField>
 
           <div className="flex gap-2">
-            <Button fullWidth type="submit">
+            <Button fullWidth size="lg" type="submit">
               Login
             </Button>
           </div>
@@ -142,13 +146,7 @@ export default function LoginPage({ params }) {
             <Separator className="flex-1" variant="default" />
           </div>
           {/* google login button */}
-          <Button
-            onClick={handleGoogleSignIn}
-            className="w-full"
-            variant="tertiary">
-            <Icon icon="devicon:google" />
-            Continue with Google
-          </Button>
+          <GoogleLoginButton />
           <div className="text-gray-500 text-sm text-center">
             Don&apos;t have an account?{" "}
             <Link href="/register" className="text-accent">

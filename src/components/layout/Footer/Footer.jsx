@@ -37,7 +37,7 @@ const Footer = () => {
             </p>
             {/* social links */}
             <div className="flex gap-4 items-center">
-              <Link href="/">
+              <Link href="/home">
                 <Button
                   isIconOnly
                   variant="tertiary"
@@ -45,7 +45,7 @@ const Footer = () => {
                   <LuFacebook />
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="/home">
                 <Button
                   isIconOnly
                   variant="tertiary"
@@ -53,7 +53,7 @@ const Footer = () => {
                   <LuTwitter />
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="/home">
                 <Button
                   isIconOnly
                   variant="tertiary"
@@ -61,7 +61,7 @@ const Footer = () => {
                   <LuInstagram />
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="/home">
                 <Button
                   isIconOnly
                   variant="tertiary"

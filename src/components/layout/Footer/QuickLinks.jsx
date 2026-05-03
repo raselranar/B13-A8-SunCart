@@ -6,7 +6,7 @@ const QuickLinks = () => {
       <h3 className="font-bold text-white text-lg mb-2">Quick Links</h3>
       <ul className="flex flex-col gap-2 *:text-gray-400">
         <li>
-          <Link href="/" className="hover:text-accent text-sm">
+          <Link href="/home" className="hover:text-accent text-sm">
             Home
           </Link>
         </li>

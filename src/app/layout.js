@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer/Footer";
 import { Toast } from "@heroui/react";
 import NavBar from "@/components/layout/Home/NavBar/NavBar";
+import { LoginToastHandler } from "@/components/UI/LoginToastHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className="light h-full antialiased">
       <body className={`${inter.className} min-h-full flex flex-col`}>
+        <LoginToastHandler />
         <NavBar />
         {children}
         <Footer />

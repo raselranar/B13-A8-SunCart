@@ -10,10 +10,10 @@ export default async function ProfilePage() {
   });
   return (
     <div className="flex justify-center py-12 bg-background px-4">
-      <Card className="flex  w-96 flex-col gap-4 p-0 rounded-3xl pb-6 shadow-xl">
+      <Card className="flex  w-102 flex-col gap-4 p-0 rounded-3xl pb-6 shadow-xl">
         {/* gradient border top */}
         <div className="bg-gradient h-20 w-full"></div>
-        <div className="relative">
+        <div className="relative px-4">
           <div className="absolute -top-15 w-full flex justify-center">
             <Badge.Anchor>
               <Avatar className="size-26 border-4 border-white">
@@ -22,7 +22,7 @@ export default async function ProfilePage() {
                   src={session?.user?.image}
                   referrerPolicy="no-referrer"
                 />
-                <Avatar.Fallback className="text-2xl text-accent">
+                <Avatar.Fallback className="text-7xl text-accent">
                   {session?.user?.name.charAt(0).toUpperCase()}
                 </Avatar.Fallback>
               </Avatar>
@@ -43,7 +43,7 @@ export default async function ProfilePage() {
           </div>
           {/* info */}
           <ul className="flex flex-col gap-4 mt-4 mx-4">
-            <li className="flex gap-2 bg-orange-50 rounded-xl py-4 px-6">
+            <li className="flex gap-2 bg-orange-50 rounded-xl -mx-3 sm:mx-0 py-4 sm:px-6">
               <div className="bg-accent/40 text-accent w-fit p-2 rounded-xl flex items-center">
                 <LuUser size={24} />
               </div>
@@ -52,13 +52,15 @@ export default async function ProfilePage() {
                 <p className="">{session?.user?.name}</p>
               </div>
             </li>
-            <li className="flex gap-2 bg-orange-50 rounded-xl py-4 px-6">
+            <li className="flex gap-2 bg-orange-50 rounded-xl -mx-3 sm:mx-0 py-4 sm:px-6">
               <div className="bg-accent/40 text-accent w-fit p-2 rounded-xl flex items-center">
                 <LuMail size={24} />
               </div>
-              <div className="">
+              <div className="truncate sm:whitespace-normal">
                 <p className="text-gray-400 text-sm ">Email Address</p>
-                <p className="">{session?.user?.email}</p>
+                <p className="truncate sm:whitespace-normal">
+                  {session?.user?.email}
+                </p>
               </div>
             </li>
           </ul>
