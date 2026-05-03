@@ -1,9 +1,5 @@
-import { Spinner } from "@heroui/react";
+import Loading from "@/components/UI/Loading";
 
 export default function loading() {
-  return (
-    <div className="flex items-center justify-center gap-4 min-h-[80vh]">
-      <Spinner size="xl" />
-    </div>
-  );
+  return <Loading />;
 }

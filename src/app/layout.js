@@ -4,16 +4,9 @@ import Footer from "@/components/layout/Footer/Footer";
 import { Toast } from "@heroui/react";
 import NavBar from "@/components/layout/Home/NavBar/NavBar";
 import { LoginToastHandler } from "@/components/UI/LoginToastHandler";
+import { Suspense } from "react";
+import Loading from "@/components/UI/Loading";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -29,9 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className="light h-full antialiased">
       <body className={`${inter.className} min-h-full flex flex-col`}>
-        <LoginToastHandler />
         <NavBar />
-        {children}
+        <Suspense fallback={<Loading />}>
+          <LoginToastHandler />
+          {children}
+        </Suspense>
         <Footer />
         <Toast.Provider placement="top end" />
       </body>
