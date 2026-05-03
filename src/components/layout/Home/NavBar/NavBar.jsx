@@ -17,7 +17,7 @@ const NavBar = () => {
   const user = session?.user;
 
   const handleLogOut = async () => {
-    console.log("Logging out...");
+    // console.log("Logging out...");
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {

@@ -16,7 +16,7 @@ const getProductsData = async () => {
 const PopularProducts = async () => {
   const allProducts = await getProductsData();
   const topProducts = allProducts.slice(0, 3);
-  console.log(topProducts.length);
+  // console.log(topProducts.length);
   return (
     <SectionComponent
       topTitle="Trending Now"

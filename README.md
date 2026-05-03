@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **SunCart – Summer Essentials Store ☀️**
 
-## Getting Started
+Welcome to **SunCart**, your go-to modern eCommerce platform for all things summer\! Whether you're looking for stylish sunglasses, breezy outfits, or essential skincare, we've got you covered.
 
-First, run the development server:
+## **🚀 Live Link**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Check out the live site here:** https://b13-a8-sun-cart.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **📖 Purpose**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The goal of this project is to provide a seamless shopping experience for seasonal summer products. Users can browse a curated selection of essentials, view detailed product information, and manage their profiles through a secure authentication system.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **✨ Key Features**
 
-## Learn More
+- **Fully Responsive Design**: Optimized for a perfect viewing experience on Mobile, Tablet, and Desktop devices.
 
-To learn more about Next.js, take a look at the following resources:
+- **Secure Authentication**: Integrated **BetterAuth** for Email/Password login and Google Social Login.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Product Showcases**: A vibrant Home Page featuring a Hero section with "Hot Deals" and a collection of popular summer items.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Protected Routes**: Product details are kept secure; users are redirected to login if they try to access details without an account.
 
-## Deploy on Vercel
+- **User Profile Management**: Logged-in users can view their profile data and update their Name and Photo.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Smooth Navigation**: Built as a Single Page Application (SPA) to ensure no errors on page reloads.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **🛠️ Tech Stack & Packages**
+
+This project was built using the following technologies:
+
+### **Core:**
+
+- **Next.js** (App Router)
+- **Tailwind CSS**
+- **BetterAuth** (Authentication)
+
+### **UI Components & Styling:**
+
+- **HeroUI**
+- **React** (for icons)
+
+### **Additional Packages:**
+
+- **Animate.css**: Used to add professional animations to the user interface.
+
+## **⚙️ Environment Variables**
+
+To run this project locally, you will need to set up environment variables for:
+
+- BETTER_AUTH_SECRET
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
+- NEXT_PUBLIC_APP_URL

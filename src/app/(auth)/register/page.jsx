@@ -32,7 +32,7 @@ export default function RegistrationPage() {
     // sign up
     const { data, error } = await authClient.signUp.email(userData);
     // show toast error on
-    console.log({ data, error });
+    // console.log({ data, error });
     if (error?.status === 422)
       return toast.danger(`Registration failed. Email already in use.`);
     if (error) return toast.danger("Registration failed.");

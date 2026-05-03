@@ -25,10 +25,10 @@ const sleep = () => new Promise((resolve) => setTimeout(resolve, 1000));
 export default function LoginPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  console.log("router:", router);
+  // console.log("router:", router);
 
   const [isPasswordShow, setIsPasswordShow] = useState(false);
-  console.log("login page");
+  // console.log("login page");
 
   // form submit
   const onSubmit = async (e) => {
@@ -38,7 +38,7 @@ export default function LoginPage() {
 
     // sign up
     const { data, error } = await authClient.signIn.email(userData);
-    console.log({ data, error });
+    // console.log({ data, error });
 
     // show toast error on
     if (error?.status === 401)
