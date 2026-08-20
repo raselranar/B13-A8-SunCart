@@ -4,7 +4,7 @@ Welcome to **SunCart**, your go-to modern eCommerce platform for all things summ
 
 ## **🚀 Live Link**
 
-**Check out the live site here:** https://b13-a8-sun-cart.vercel.app/
+**Check out the live site here:** https://sun-cart-r.vercel.app
 
 ## **📖 Purpose**
 
